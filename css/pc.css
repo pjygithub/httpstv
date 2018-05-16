@@ -18,7 +18,7 @@
 	width:900px;
 	margin: 0 auto;
 	background-color: #800080;
-	color:#F8F8FF;
+	color: #f8f8ff;
 	padding-top: 20px;
 	padding-bottom: 15px;
 }
@@ -50,12 +50,12 @@
 	vertical-align: left;
 	text-align: left;
 }
-.menu li{
+.menu ul li{
 	color: #333;
 	font-size: 18px;
 	display: inline-block;
 }
-.menu li a{
+.menu ul li a{
 	color:#333;
 	padding-left: 24px;
 	text-decoration: none;
@@ -113,7 +113,7 @@
 	text-decoration: none;
 }
 .bottom_main a:hover{
-	/*color:blue;*/
+	color:blue;
 }
 
 /* 管理页 */
@@ -127,11 +127,7 @@
 	margin-left: 3px;
 	padding-right: 16px;
 }
-.area_class span{
-	display: inline-block;
-	margin-left: 3px;
-	padding-right: 16px;
-}
+
 .channel_id span{
 	display: inline-block;
 	margin-left: 3px;
@@ -153,25 +149,34 @@
 
 /* admin */
 .from {
-	width: 300px;
+	width: 900px;
 	display: block;
 	text-align: center;
-	padding-left: 250px;
+	margin:0 auto;
 	padding-top: 50px;
 }
-.label{
+.from p label{
 	display: inline-block;
 	text-align: right;
-	padding-top: 24px;
+	padding-top: 36px;
+	width:66px;
+}
+.from p input{
+	width:234px;
+	margin-top:12px;
+	margin-left:12px;
+	margin-right:12px;
+	margin-bottom: 20px;
 }
 .submit{
-	width: 200px;
-	display: block;
-	padding-top: 25px;
+	width: 400px;
+	/* display: block; */
+	margin-top: 25px;
+	
 }
 
 /* login.php */
-.admin_class{
+.login_class{
 	display: block;
 	width: 300px;
 	padding-top: 150px;
@@ -180,7 +185,74 @@
 .top_main_box h4 a{
 	display: inline-block;
 	font-size: 12px;
-	background-color: red;
 	color: #f8f8ff;
 	padding-left: 10px;
+	text-decoration-line: none;
+	margin-bottom:2px;
+}
+ 
+
+/* add_admin */
+
+.add_main_box{
+	width:900px;
+	margin:20px auto;
+	padding-top:50px;
+}
+.add_admin_channel p{
+	display: inline-block;
+	padding-top:12px;
+	width:123px;
+	text-align: right;
+}
+.add_admin_channel div{
+	padding-left:103px;
+}
+.add_admin_channel div ul{
+	display:inline-block;
+}
+.add_admin_channel div ul li{
+	display:inlink-block;
+	width:120px;
+	padding-left:12px;
+	list-style-type: none;
+}
+.add_admin_channel p{
+	display: inline-block;
+	padding-top:12px;
+	width:123px;
+	text-align: right;
+}
+.add_admin_channel_url div form p{
+	display: block;
+	padding-top:12px;
+	width:200px;
+	text-align: right;
+}
+.add_admin_channel_url div{
+	padding-left:0px;
+}
+.add_admin_channel_url div ul{
+	display:inline-block;
+}
+.add_admin_channel_url div ul li{
+	display:inlink-block;
+	width:160px;
+	padding-left:12px;
+	list-style-type: none;
+}
+.input2{
+	display: inline-block;
+	width:200px;
+	margin: 0 auto;
+}
+.area_class ul{
+	display:inline-block;
+} 
+.area_class ul li{
+	display: inline-block;
+	margin-left: 8px;
+	width:73px;
+	padding-left:12px;
+	/* padding-right: 16px; */
 }

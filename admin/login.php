@@ -17,7 +17,7 @@
     </div>
 </div>
 <div class="main_box">
-    <div class="admin_class">
+    <div class="login_class">
 
 <?php 
 
