@@ -1,0 +1,233 @@
+/**
+	@ author: Pan Jinyong;
+	@ date: 2018-5-13;
+	@ version: 0.0.1;
+**/
+
+*{
+	padding: 0px;
+	margin: 0px;
+}
+
+/* 头部，菜单之前 */
+
+.top_page_div{
+	background-color: #800080;
+	width: auto;
+	height: 123px;
+}
+.top_main_box{
+	width:900px;
+	margin: 0 auto;
+	background-color: #800080;
+	color:#F8F8FF;
+	padding-top: 20px;
+	padding-bottom: 15px;
+
+}
+
+.top_main_box h1{
+	font-size: 44px;
+}
+.top_main_box h4{
+	text-align: right;
+}
+
+
+.main_box{
+	width:900px;
+	margin: 0 auto;
+}
+
+/* 菜单*/
+
+.main_box{
+	line-height: 26px;
+	padding-top: 13px;
+
+}
+
+.add_channel_maindiv{
+	width: 300px;
+	padding-top: 88px;
+	margin: 0 auto;
+	display: block;
+	text-align: left;
+	font-size: 25px;
+
+}
+.menu ul{
+	display: block;
+	vertical-align: left;
+	text-align: left;
+	
+}
+.menu li{
+	color: #333;
+	font-size: 18px;
+	display: inline-block;
+
+
+}
+
+.menu li a{
+	color:#333;
+	padding-left: 24px;
+	text-decoration: none;
+}
+
+.menu ul li a:hover{
+	color:blue;
+
+}
+
+
+/* 内容 */
+
+.main_content h2{
+	padding-top: 36px;
+	padding-left: 3px;
+
+}
+
+.main_content h2 span{
+	font-size: 12px;
+	font-variant: none;
+}
+
+.main_content h2 span a{
+	color: #333;
+}
+
+.main_content li{
+	padding-right:36px;
+	padding-top: 25px;
+	padding-left: 2em;
+	display: inline-block;
+}
+
+.main_content img{
+	width: 94px;
+	height: 42px
+	
+}
+
+
+/* 底部 */
+.erweima {
+	width: 900px;
+	padding: 0 auto;
+	padding-top: 65px;
+} 
+
+.erweima img{
+	width: 155px;
+	padding-top: 3px;
+	display:block;
+}
+
+.bottom_main{
+	background-color: #800080;
+	height:88px;
+	width: 100%;
+	color:#F8F8FF;
+	padding-top: 20px;
+	padding-bottom: 15px;
+	text-align: center;
+}
+
+.bottom_main a{
+	text-align: center;
+	color: #F8F8FF;
+	text-decoration: none;
+
+}
+.bottom_main a:hover{
+	/*color:blue;*/
+
+}
+
+
+/* 管理页 */
+
+.area{
+	padding-left: 12px;
+	padding-top: 2px;
+	margin: 2px;
+}
+
+.areaid span{
+	display: inline-block;
+	margin-left: 3px;
+	padding-right: 16px;
+	
+}
+
+.area_class span{
+	display: inline-block;
+	margin-left: 3px;
+	padding-right: 16px;
+}
+.channel_id span{
+	display: inline-block;
+	margin-left: 3px;
+	padding-right: 16px;
+	
+}
+
+
+.class{
+	padding-left: 12px;
+	padding-top: 2px;
+	margin: 2px;
+}
+.input1{
+	text-align: left;
+	width:300px;
+
+}
+
+.from span{
+	text-align: right;
+	width: 68px;
+}
+/* admin */
+.from {
+	width: 300px;
+	display: block;
+	text-align: center;
+	padding-left: 250px;
+	padding-top: 50px;
+
+}
+
+.label{
+	
+	display: inline-block;
+	text-align: right;
+	padding-top: 24px;
+
+}
+
+.submit{
+	width: 200px;
+	display: block;
+	padding-top: 25px;
+}
+/* login.php */
+.admin_class{
+	display: block;
+	width: 300px;
+	padding-top: 150px;
+	padding-left: 320px;
+
+}
+.top_main_box h4 a{
+	display: inline-block;
+	font-size: 12px;
+	background-color: red;
+	color: #f8f8ff;
+	padding-left: 10px;
+
+
+}
