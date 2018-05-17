@@ -6,13 +6,13 @@
 -->
 
 <!-- 公共部分1start-->
-
 <?php
 
 //自定义关闭报错
 ini_set("display_errors", "off");
 error_reporting(E_ALL | E_STRICT);
 
+//载入数据库
 include('conn.php'); 
 
 ?>
@@ -43,73 +43,80 @@ include('conn.php');
 	<hr />
 	<form class="add_admin_form" action="./add_channel.php" method="post" name="add_channel" target="_self">
 		<div class="add_admin_channel">
-			<!--<span>*频道ID：</span><input class="input1" type="text" name="CHID">（请填写数字）<br />-->
-			<p>*频道名称：</p><input class="input1" type="text" name="CHName"><br />
-			<p>*频道台标路径：</p><input class="input1" type="text" name="CHIcon">（请填写路径。如"cctv/cctv1".png）<br/>
-			<p>*频道地区：</p><div class="areaid">
-			<?php 
-					mysql_select_db("httpstv", $con);
+			<!--<p>*频道ID：</p><input class="input1" type="text" name="CHID">（请填写数字）<br />-->
+			<p>*频道名称：</p>
+			<input class="input1" type="text" name="CHName"><br />
+			<p>*频道台标路径：</p>
+			<input class="input1" type="text" name="CHIcon">（请填写路径。如"cctv/cctv1".png）<br/>
+			<p>*频道地区：</p>
+			<div class="areaid">
+				<?php 
 					$result_tvl_area = mysql_query("SELECT * FROM tvl_area");
 					// 显示目录-地区表
 					while($row = mysql_fetch_array($result_tvl_area)){
 						$areaid = $row['AID'];
 						echo "<ul><li> <input class='area' type='radio' name='tvl_area' value='" . $areaid . "' id='". $areaid . "' /> " . $row['AName'] . "</li></ul>";
 					}
-				?></P>
+				?>
 		
 		<br />
-		*频道分类：<div class="area_class">
-			<?php 
-				mysql_select_db("httpstv", $con);
-				$result_tvl_class = mysql_query("SELECT * FROM tvl_class");
-				// 显示目录-地区表
-				while($row = mysql_fetch_array($result_tvl_class)){
-					$classid = $row['CID'];
-					echo "<ul><li><input class='class' type='checkbox' name='tvl_class[]' value='" . $classid . "' id='". $classid . "'/>" . $row['CName']. "</li></ul>";
-
-				 }
-			?>
-		</div>
+		<p>*频道分类：</p>
+			<div class="area_class">
+				<?php 
+					$result_tvl_class = mysql_query("SELECT * FROM tvl_class");
+					// 显示目录-地区表
+					while($row = mysql_fetch_array($result_tvl_class)){
+						$classid = $row['CID'];
+						echo "<ul><li><input class='class' type='checkbox' name='tvl_class[]' value='" . $classid . "' id='". $classid . "'/>" . $row['CName']. "</li></ul>";
+					}
+				?>
+			</div>
 			<br />
-
 		<input class="input2" type="reset" name="resname"  value="我要重置" />
 		<input class="input2" type="submit" name="add_channel"  value="确认无误，添加频道"/><br />
 	</form>
 
 <br /><br /><br /><br />
+
 	<h2>直播源添加</h2>
 	<hr />
 	<div class="add_admin_channel_url">
 		<div>
 			<form class="form" action="./add_url.php" method="post" name="add_url" target="_self">
-				<p>*源属频道名称：</p><P class= "channel_id">
-				<?php 
-						mysql_select_db("httpstv", $con);
+				<p>*源属频道名称：</p>
+				<div class= "channel_id">
+					<?php 
 						$result_tvl_channel = mysql_query("SELECT * FROM tvl_channel");
 						// 显示目录-地区表
 						while($row = mysql_fetch_array($result_tvl_channel)){
 							$channelid = $row['CHID'];
 							echo "<ul><li> <input class='area' type='radio' name='tvl_channel' value='" . $channelid . "' id='". $channelid . "' /> " . $row['CHName'] . "</li></ul>";
-							
 						}
-					?></P>
-				<P>*源来自何处：</p><input class="input1" type="text" name="UFrom"><br />
-				<p>*源直播地址：</p><input class="input1" type="text" name="UUrl"><br />
-				<p>*源非移动端直播地址：</p><input class="input1" type="text" name="UPage"><br />
-				<p>*源请求头：</p><input class="input1" type="text" name="UHeader"><br />
+					?>
+				</div>
+				<P>*源来自何处：</p>
+				<input class="input1" type="text" name="UFrom"><br />
+				<p>*源直播地址：</p>
+				<input class="input1" type="text" name="UUrl"><br />
+				<p>*源非移动端直播地址：</p>
+				<input class="input1" type="text" name="UPage"><br />
+				<p>*源请求头：</p>
+				<input class="input1" type="text" name="UHeader"><br />
 				</P>
-				
-					<br /><br />
-
+				<br />
+				<br />
 				<input type="reset" name="resname"  value="我要重置" />
 				<input class="input1" type="submit" name="add_channel"  value="确认无误，添加频道"/><br />
 			</form>
-				</div>
-</div>
-		
-<center><div class="erweima"><span>联系我们</span><img src="../img/erweima.png"></center>
-</div>
 		</div>
+	</div>
+		
+<center>
+	<div class="erweima">
+		<span>联系我们</span>
+		<img src="../img/erweima.png">
+	</div>
+</center>
 
 <div class="bottom_main">
 	<span>All Rights Reserved © 2018    GXULOVE.COM.,Ltd</span><br /><br/>

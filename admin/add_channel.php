@@ -18,44 +18,43 @@
 </div>
 <div class="main_box">
 	<div class="add_channel_maindiv">
+		<?php
+			//自定义关闭报错
+			ini_set("display_errors", "off");
+			error_reporting(E_ALL | E_STRICT);
 
-<?php
+			// 载入数据库配置
+			include('conn.php'); 
 
-//自定义关闭报错
-ini_set("display_errors", "off");
-error_reporting(E_ALL | E_STRICT);
+			if (!empty($_POST['tvl_class'])) {
+				$tvl_class_q = array();
+				$tvl_class_q = $_POST[tvl_class];
+				$tvl_class_a = implode('', $tvl_class_q);
+			}else{
+				echo mysqli_error($con);
+			}
+			$sql = "INSERT INTO tvl_channel (CHName, CHIcon, CHLock, AID, CID) VALUES ('$_POST[CHName]','/img/icon/$_POST[CHIcon].png',1,'$_POST[tvl_area]','$tvl_class_a')";
+			if (!mysql_query($sql,$conn)){
+				die('错误' .mysql_error());
 
-// 数据库配置
-include('conn.php'); 
+			}
 
-if (!empty($_POST['tvl_class'])) {
-	$tvl_class_q = array();
-	$tvl_class_q = $_POST[tvl_class];
-	$tvl_class_a = implode('', $tvl_class_q);
-}else{
-	echo mysqli_error($con);
-}
+				echo "Return：已被添加1行!";
+				mysql_close($conn);
 
-mysql_select_db("httpstv",$con);
-$sql = "INSERT INTO tvl_channel (CHName, CHIcon, CHLock, AID, CID) VALUES ('$_POST[CHName]','/img/icon/$_POST[CHIcon].png',1,'$_POST[tvl_area]','$tvl_class_a')";
-if (!mysql_query($sql,$con)){
-	die('错误' .mysql_error());
+				echo "<br / ><br / >";
+				echo "<a href='./ba1dea27da5af301e81a1f8eafc68d5503edef890b4ae817a8de068250778ae2.php'>返回</a>";
 
-}
-
-echo "Return：已被添加1行!";
-mysql_close($con);
-
-echo "<br / ><br / >";
-echo "<a href='./ba1dea27da5af301e81a1f8eafc68d5503edef890b4ae817a8de068250778ae2.php'>返回</a>";
-
-?>
-</div>
+		?>
+	</div>
 </div>
 		
-<center><div class="erweima"><span>联系我们</span><img src="../img/erweima.png"></center>
-</div>
-		</div>
+<center>
+	<div class="erweima">
+		<span>联系我们</span>
+		<img src="../img/erweima.png">
+	</div>
+</center>
 
 <div class="bottom_main">
 	<span>All Rights Reserved © 2018    GXULOVE.COM.,Ltd</span><br /><br/>
