@@ -26,7 +26,7 @@ include('conn.php');
 	<link rel="shortcut icon" href="./img/logo.ico" />
 	<link rel="bookmark" href="../img/logo.ico" type="image/x-icon"　/>
 	<title>网星电视直播源管理——加密 · 安全 · 网星。新一代互联网电视直播源管理系统。</title>
-	<link href="../css/pc.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
 </head>
 <body>
 <div class="top_page_div">
@@ -81,7 +81,6 @@ include('conn.php');
 	<h2>直播源添加</h2>
 	<hr />
 	<div class="add_admin_channel_url">
-		<div>
 			<form class="form" action="./add_url.php" method="post" name="add_url" target="_self">
 				<p>*源属频道名称：</p>
 				<div class= "channel_id">
@@ -108,9 +107,8 @@ include('conn.php');
 				<input type="reset" name="resname"  value="我要重置" />
 				<input class="input1" type="submit" name="add_channel"  value="确认无误，添加频道"/><br />
 			</form>
-		</div>
 	</div>
-		
+</div>		
 <center>
 	<div class="erweima">
 		<span>联系我们</span>
@@ -118,9 +116,11 @@ include('conn.php');
 	</div>
 </center>
 
+<div class="bottom">
 <div class="bottom_main">
 	<span>All Rights Reserved © 2018    GXULOVE.COM.,Ltd</span><br /><br/>
 	<span>我们的电邮：jydf200910@163.com</span>
+</div>
 </div>
 </body>
 </html>

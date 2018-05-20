@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="./img/logo.ico" />
     <link rel="bookmark" href="./img/logo.ico" type="image/x-icon"　/>
     <title>网星电视直播源管理——加密 · 安全 · 网星。新一代互联网电视直播源管理系统。</title>
-    <link href="../css/pc.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
 </head>
 <body>
 <div class="top_page_div">
